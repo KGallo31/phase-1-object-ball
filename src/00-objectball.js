@@ -13,22 +13,29 @@ function gameObject()
         'Ben Gorden': {'number': 8, 'shoe': 15, 'points': 33, 'rebounds': 3, 'assist': 2, 'steals': 1, 'blocks': 1, 'slamDunks': 0},
         'Brandon Haywood': {'number': 33, 'shoe': 15, 'points': 6, 'rebounds': 12, 'assist': 12, 'steals': 22, 'blocks': 5, 'slamDunks': 12}}}
     }
+  //console.log(team)
     return team;
 }
-console.log(numPointsScored('Reggie Evans'));
+//console.log(gameObject())
+console.log(numPointsScored('Brook Lopez'));
 
 function numPointsScored(name){
     for(let place in gameObject()){
         let playerObj = gameObject()[place];
-        // console.log(playerObj)
+        //console.log(playerObj)
         for(let key in playerObj){
-          // console.log(play)
+            // console.log(playerObj[key])
           if (key === 'players'){
-          for (let player in key){
-            console.log(player)
+          for(let player in playerObj[key])
+            if(player === name)
+            return(playerObj[key][name]['points'])
+        // for (let player in key){
+        //     console.log(key[player])
+        //     //console.log(player)
 
-          }
-          }
-        }
+          
+         } 
+        } 
     }
+  return 'Not Found';
 }
