@@ -1,4 +1,4 @@
-function GameObject() 
+function gameObject() 
 {
     const team = 
     {
@@ -15,4 +15,20 @@ function GameObject()
     }
     return team;
 }
-console.log(GameObject());
+console.log(numPointsScored('Reggie Evans'));
+
+function numPointsScored(name){
+    for(let place in gameObject()){
+        let playerObj = gameObject()[place];
+        // console.log(playerObj)
+        for(let key in playerObj){
+          // console.log(play)
+          if (key === 'players'){
+          for (let player in key){
+            console.log(player)
+
+          }
+          }
+        }
+    }
+}
