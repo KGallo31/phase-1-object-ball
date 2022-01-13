@@ -8,7 +8,6 @@ testing testing testing
 - Practice iterating over nested objects
 
 ## Instructions
-
 Great news! You're going to an NBA game. The only catch is that you've been
 volunteered to keep stats at the game.
 
